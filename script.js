@@ -4,6 +4,22 @@ function pageLoad () {
   const root = document.getElementById("root");
   let notes = [];
 
+  // HOMEWORK: pusholni pontokat, css formázás
+  /* OPCIONÁLIS: highlight js kiszínezi a kódblokkokat
+
+  https://highlightjs.org/usage/
+
+  https://highlightjs.org/download/
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+
+    FOR CIKLUS UTÁN pageLoadba betenni:
+    document.querySelectorAll('code').forEach((block) => {
+    hljs.highlightBlock(block);
+    });
+  */
+
    //1. Oldal betöltéskor lefutó függvény
     /* 
       pageLoad(){};
