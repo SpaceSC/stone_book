@@ -5,7 +5,7 @@ function pageLoad () {
   let notes = [];
 
   // HOMEWORK: pusholni pontokat, css formázás
-  /* OPCIONÁLIS: highlight js kiszínezi a kódblokkokat
+  /* OPCIONÁLIS: highlight js kiszínezi böngészőben a kódblokkokat
 
   https://highlightjs.org/usage/
 
