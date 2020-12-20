@@ -20,6 +20,185 @@ function pageLoad () {
     });
   */
  
+  //általános
+  notes.push({
+    tag: "div",
+    content: `
+      1. Egymásra épülő komplexitású megoldandó feladatok
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+        pageLoad(){};
+        window.addEventListener("load", pageLoad);
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      2. Átlátható kód: tabolás, sorkihagyások, kommentek
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+        pageLoad(){};
+        window.addEventListener("load", pageLoad);
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      3. Alap template elemek egy projekthez
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+        pageLoad(){};
+        window.addEventListener("load", pageLoad);
+    `
+    });
+  
+  //HTML
+  notes.push({
+    tag: "div",
+    content: `
+      1. VSC-ben POWER USER move-ok: autocomplete trükkök (létrehozás, tagek közé rakás stb.), automatikus html:5 alapstruktúra használata, meggyorsítja a folyamatot, ennek mintájára átláthatóan bővíteni
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+      !DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Stone book</title>
+        </head>
+        <body>
+        </body>
+      </html>
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      2. Helyesen belinkelt .js, .css a headben (filenév, elérési út)
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+      <link rel="stylesheet" href="CSS/style.css">
+      <script src="script.js"></script>
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      3. Sorrend
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+      <body>
+        <div id="root">
+          <div>1. div</div>
+          <div>2. div</div>
+        </div>
+      </body>
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      3. Classok, id-k pontosan írása, következetes használata
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+      <div id="root">
+        <div id="firstDiv" class="first">1. div</div>
+        <div id="secondDiv" class="second">2. div</div>
+      </div>
+    `
+    });
+
+
+  //CSS
+  notes.push({
+    tag: "div",
+    content: `
+      1. Sass: mert megírja pontosan és egyszerűen a selectorokat pl. egymásba ágyazással
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+      body {
+        background-color: #d6fde6;
+        font-family: 'Roboto', sans-serif;
+
+        .root {
+          background-color: #8ff5ba;
+        }
+      }
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      2. Css reset
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      3. Mindig lezárni az egységeket, zárójel hiánya elronthatja
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+      selector {}
+    `
+    });  
+  
+  //js
   notes.push({
     tag: "div",
     content: `
@@ -38,30 +217,28 @@ function pageLoad () {
   notes.push({
     tag: "div",
     content: `
-      1. Oldal betöltéskor lefutó függvény
+      2. HTML elemek létreozása javascriptből meglévő divbe
     `
     });
 
   notes.push({
     tag: "code",
     content: `
-        pageLoad(){};
-        window.addEventListener("load", pageLoad);
+      document.querySelector("#myDiv").insertAdjacentHTML("beforeend", ${``});
     `
     });
 
   notes.push({
     tag: "div",
     content: `
-      1. Oldal betöltéskor lefutó függvény
+      3. Function, document: constba érdemes menteni
     `
     });
 
   notes.push({
     tag: "code",
     content: `
-        pageLoad(){};
-        window.addEventListener("load", pageLoad);
+      const myRoot = document.getElementById("root");
     `
     });
 
@@ -171,7 +348,7 @@ function pageLoad () {
         <div class="nav">
           <p class="motto">Our motto</p>
           <a href="index.html">
-            <img border="0" alt="logo" src="images/logo.png" width="100" height="100">
+            <img border="0" alt="logo" src="images/logo.png">
           </a>
           <div class="menu">
             <div class="wrap-in-menu">
@@ -194,14 +371,19 @@ function pageLoad () {
             </div>
           </div>
         </div>
-        <div class="anim-loft-wrapper">
-          <h1 class="anim-loft">Loftgarten</h1>
+        <div class="contentWrapper">
+          <h1 class="content">Content</h1>
         </div>
+        <div class="footerWrapper">
+          <h1 class="footer">Content</h1>
+        </div>
+      `
+      );
     */
 
-  //3. Function, document: constba
+  //3. Function, document: constba érdemes menteni
     /* 
-    
+    const myRoot = document.getElementById("root");
     */
 }
 
