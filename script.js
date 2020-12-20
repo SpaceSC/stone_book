@@ -269,7 +269,7 @@ function pageLoad () {
     });
 
 
-  /* hljs not rendering html correctly
+  /* hljs not rendering html correctly, but now solved with white-space: pre; and &lt; and &gt; instead of <> workaround
   const makeHtml = document.getElementsByClassName("apache");
   console.log(makeHtml);
 
