@@ -41,7 +41,7 @@ body #root {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 50vw;
+  width: 40vw;
   padding-bottom: 2rem;
 }
 
