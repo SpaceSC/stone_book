@@ -21,6 +21,7 @@ function pageLoad () {
   */
  
   //általános
+
   notes.push({
     tag: "h1",
     content: `
@@ -84,23 +85,24 @@ function pageLoad () {
   notes.push({
     tag: "div",
     content: `
-      1. VSC-ben POWER USER move-ok: <br>autocomplete trükkök (létrehozás, tagek közé rakás stb.), <br>automatikus html:5 alapstruktúra használata, <br>meggyorsítja a folyamatot, ennek mintájára átláthatóan bővíteni
+      1. VSC-ben POWER USER move-ok: autocomplete trükkök (létrehozás, tagek közé rakás stb.), automatikus html:5 alapstruktúra használata, meggyorsítja a folyamatot, ennek mintájára átláthatóan bővíteni
     `
     });
 
+  // <> helyett &lt; és &gt; fog csak jól renderelődni
   notes.push({
     tag: "code",
     content: `
-      !DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Stone book</title>
-        </head>
-        <body>
-        </body>
-      </html>
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang="en"&gt;<br>
+    &nbsp;&lt;head&gt;<br>
+    &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+    &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+    &nbsp;&nbsp;&lt;title&gt;Stone book&lt;/title&gt;<br>
+    &nbsp;&lt;/head&gt;<br>
+    &nbsp;&lt;body&gt;<br>
+    &nbsp;&lt;/body&gt;<br>
+    &lt;/html&gt;<br>
     `
     });
 
@@ -114,8 +116,8 @@ function pageLoad () {
   notes.push({
     tag: "code",
     content: `
-      <link rel="stylesheet" href="CSS/style.css">
-      <script src="script.js"></script>
+    &lt;link rel="stylesheet" href="CSS/style.css"&gt;<br>
+    &lt;script src="script.js"&gt;&lt;/script&gt;
     `
     });
 
@@ -129,29 +131,29 @@ function pageLoad () {
   notes.push({
     tag: "code",
     content: `
-      <body>
-        <div id="root">
-          <div>1. div</div>
-          <div>2. div</div>
-        </div>
-      </body>
+    &lt;body&gt;<br>
+    &nbsp;&lt;div id="root"&gt;<br>
+    &nbsp;&nbsp;&lt;div>1. div&lt;/div&gt;<br>
+    &nbsp;&nbsp;&lt;div>2. div&lt;/div&gt;<br>
+    &nbsp;&lt;/div&gt;<br>
+    &lt;/body&gt;
     `
     });
 
   notes.push({
     tag: "div",
     content: `
-      3. Classok, id-k pontosan írása, következetes használata
+      4. Classok, id-k pontosan írása, következetes használata
     `
     });
 
   notes.push({
     tag: "code",
     content: `
-      <div id="root">
-        <div id="firstDiv" class="first">1. div</div>
-        <div id="secondDiv" class="second">2. div</div>
-      </div>
+    &lt;div id="root"&gt;<br>
+    &nbsp;&lt;div id="firstDiv" class="first"&gt;1. div&lt;/div&gt;<br>
+    &nbsp;&lt;div id="secondDiv" class="second"&gt;2. div&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
     `
     });
 
@@ -270,13 +272,31 @@ function pageLoad () {
     `
     });
 
-    for(note of notes){
-      // console.log(note.content);
-      root.insertAdjacentHTML("beforeend", `
-      <${note.tag}>${note.content}</${note.tag}>
-      `
-      );
-    }
+  for(note of notes){
+    // console.log(note.content);
+    root.insertAdjacentHTML("beforeend", `
+    <${note.tag}>${note.content}</${note.tag}>
+    `
+    );
+  }
+
+  hljs.configure({useBR: true});
+
+  document.querySelectorAll('code').forEach((block) => {
+    hljs.highlightBlock(block);
+    });
+
+  const makeHtml = document.getElementsByClassName("apache");
+  console.log(makeHtml);
+
+  for (let index = 0; index < makeHtml.length; index++) {
+    makeHtml[index].classList.add("html");
+    //makeHtml[index].classList.add("nohighlight");
+    makeHtml[index].classList.remove("hljs");
+    makeHtml[index].classList.remove("apache");
+  }
+  
+  
 
 // Nekem fontos dolgok amiket tanultunk
 

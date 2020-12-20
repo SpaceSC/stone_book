@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+$heading-font: 'Merriweather', serif;
+
 *,
 *::before,
 *::after {
@@ -21,15 +24,31 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 50vw;
+    padding-bottom: 2rem;
 
-    h1 {
+    h1, h2 {
+      font-family: $heading-font;
       align-self: center;
       color: #f3513c;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
     }
-    
-    h2 {
-      align-self: center;
-      color: #f3513c;
+
+    div {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    code {
+      padding-bottom: 1rem;
+
+      link {
+        display: flex;
+       
+      }
+      script {
+        display: flex;
+      }
     }
   }
 }

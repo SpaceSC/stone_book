@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
 *,
 *::before,
 *::after {
@@ -41,19 +42,37 @@ body #root {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 50vw;
+  padding-bottom: 2rem;
 }
 
-body #root h1 {
+body #root h1, body #root h2 {
+  font-family: "Merriweather", serif;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   color: #f3513c;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-body #root h2 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  color: #f3513c;
+body #root div {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+body #root code {
+  padding-bottom: 1rem;
+}
+
+body #root code link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #root code script {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
