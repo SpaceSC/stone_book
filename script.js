@@ -19,12 +19,7 @@ function pageLoad () {
     hljs.highlightBlock(block);
     });
   */
-
-   //1. Oldal betöltéskor lefutó függvény
-    /* 
-      pageLoad(){};
-      window.addEventListener("load", pageLoad);
-    */
+ 
   notes.push({
     tag: "div",
     content: `
@@ -32,21 +27,51 @@ function pageLoad () {
     `
     });
 
-    notes.push({
-      tag: "code",
-      content: `
-          pageLoad(){};
-          window.addEventListener("load", pageLoad);
-      `
-      });
+  notes.push({
+    tag: "code",
+    content: `
+        pageLoad(){};
+        window.addEventListener("load", pageLoad);
+    `
+    });
 
-      for(note of notes){
-        // console.log(note.content);
-        root.insertAdjacentHTML("beforeend", `
-        <${note.tag}>${note.content}</${note.tag}>
-        `
-        );
-      }
+  notes.push({
+    tag: "div",
+    content: `
+      1. Oldal betöltéskor lefutó függvény
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+        pageLoad(){};
+        window.addEventListener("load", pageLoad);
+    `
+    });
+
+  notes.push({
+    tag: "div",
+    content: `
+      1. Oldal betöltéskor lefutó függvény
+    `
+    });
+
+  notes.push({
+    tag: "code",
+    content: `
+        pageLoad(){};
+        window.addEventListener("load", pageLoad);
+    `
+    });
+
+    for(note of notes){
+      // console.log(note.content);
+      root.insertAdjacentHTML("beforeend", `
+      <${note.tag}>${note.content}</${note.tag}>
+      `
+      );
+    }
 
 // Nekem fontos dolgok amiket tanultunk
 
@@ -134,14 +159,47 @@ function pageLoad () {
 
 // javascript nekem fontos dolgok
 
- 
+  //1. Oldal betöltés eseménykor lefutó függvény
+  /* 
+    pageLoad(){};
+    window.addEventListener("load", pageLoad);
+  */
 
-  //2. Function, document: constba
+  //2. HTML elemek létreozása javascriptből a meglévő #root divbe
     /* 
-    
+      document.querySelector("#root").insertAdjacentHTML("beforeend", `
+        <div class="nav">
+          <p class="motto">Our motto</p>
+          <a href="index.html">
+            <img border="0" alt="logo" src="images/logo.png" width="100" height="100">
+          </a>
+          <div class="menu">
+            <div class="wrap-in-menu">
+              <div class="nav-in">
+                <div class="nav-ti">Projects</div>
+                <div class="underline w-embed"></div>
+              </div>
+              <div class="nav-in">
+                <div class="nav-ti">About</div>
+                <div class="underline w-embed"></div>
+              </div>
+              <div class="nav-in">
+                <div class="nav-ti">Contact</div>
+                <div class="underline w-embed"></div>
+              </div>
+            </div> 
+            <div class="sandwich-wrap">
+              <div class="sandwich"></div>
+              <div class="sandwich s"></div>
+            </div>
+          </div>
+        </div>
+        <div class="anim-loft-wrapper">
+          <h1 class="anim-loft">Loftgarten</h1>
+        </div>
     */
 
-  //3.
+  //3. Function, document: constba
     /* 
     
     */
