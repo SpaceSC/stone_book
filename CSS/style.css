@@ -65,6 +65,7 @@ body #root code {
   padding: 1rem;
   white-space: pre;
   line-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 body #root code link {
