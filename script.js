@@ -37,14 +37,6 @@ function pageLoad () {
     });
 
   notes.push({
-    tag: "code",
-    content: `
-        pageLoad(){};
-        window.addEventListener("load", pageLoad);
-    `
-    });
-
-  notes.push({
     tag: "div",
     content: `
       2. Átlátható kód: tabolás, sorkihagyások, kommentek
@@ -52,25 +44,9 @@ function pageLoad () {
     });
 
   notes.push({
-    tag: "code",
-    content: `
-        pageLoad(){};
-        window.addEventListener("load", pageLoad);
-    `
-    });
-
-  notes.push({
     tag: "div",
     content: `
       3. Alap template elemek egy projekthez
-    `
-    });
-
-  notes.push({
-    tag: "code",
-    content: `
-        pageLoad(){};
-        window.addEventListener("load", pageLoad);
     `
     });
   
@@ -286,15 +262,19 @@ function pageLoad () {
     hljs.highlightBlock(block);
     });
 
+
+  /* hljs not rendering html correctly
   const makeHtml = document.getElementsByClassName("apache");
   console.log(makeHtml);
 
+ 
   for (let index = 0; index < makeHtml.length; index++) {
     makeHtml[index].classList.add("html");
     //makeHtml[index].classList.add("nohighlight");
     makeHtml[index].classList.remove("hljs");
     makeHtml[index].classList.remove("apache");
   }
+  */
   
   
 
