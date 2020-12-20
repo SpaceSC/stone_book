@@ -75,7 +75,7 @@ function pageLoad () {
   
   //HTML
   notes.push({
-    tag: "h1",
+    tag: "h2",
     content: `
       HTML
     `
@@ -84,7 +84,7 @@ function pageLoad () {
   notes.push({
     tag: "div",
     content: `
-      1. VSC-ben POWER USER move-ok: autocomplete trükkök (létrehozás, tagek közé rakás stb.), automatikus html:5 alapstruktúra használata, meggyorsítja a folyamatot, ennek mintájára átláthatóan bővíteni
+      1. VSC-ben POWER USER move-ok: <br>autocomplete trükkök (létrehozás, tagek közé rakás stb.), <br>automatikus html:5 alapstruktúra használata, <br>meggyorsítja a folyamatot, ennek mintájára átláthatóan bővíteni
     `
     });
 
@@ -158,7 +158,7 @@ function pageLoad () {
 
   //CSS
   notes.push({
-    tag: "h1",
+    tag: "h2",
     content: `
       CSS
     `
@@ -221,7 +221,7 @@ function pageLoad () {
   
   //js
   notes.push({
-    tag: "h1",
+    tag: "h2",
     content: `
       JavaScript
     `

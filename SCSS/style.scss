@@ -7,11 +7,29 @@
   }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #faf4f2;
   font-family: 'Roboto', sans-serif;
   color: #3a3a39;
 
-  .root {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50vw;
+
+    h1 {
+      align-self: center;
+      color: #f3513c;
+    }
     
+    h2 {
+      align-self: center;
+      color: #f3513c;
+    }
   }
 }
