@@ -69,16 +69,16 @@ function pageLoad () {
   notes.push({
     tag: "code",
     content: `
-    &lt;!DOCTYPE html&gt;<br>
-    &lt;html lang="en"&gt;<br>
-    &nbsp;&lt;head&gt;<br>
-    &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
-    &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
-    &nbsp;&nbsp;&lt;title&gt;Stone book&lt;/title&gt;<br>
-    &nbsp;&lt;/head&gt;<br>
-    &nbsp;&lt;body&gt;<br>
-    &nbsp;&lt;/body&gt;<br>
-    &lt;/html&gt;<br>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Stone book&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
     `
     });
 
@@ -92,7 +92,7 @@ function pageLoad () {
   notes.push({
     tag: "code",
     content: `
-    &lt;link rel="stylesheet" href="CSS/style.css"&gt;<br>
+    &lt;link rel="stylesheet" href="CSS/style.css"&gt;
     &lt;script src="script.js"&gt;&lt;/script&gt;
     `
     });
@@ -107,11 +107,11 @@ function pageLoad () {
   notes.push({
     tag: "code",
     content: `
-    &lt;body&gt;<br>
-    &nbsp;&lt;div id="root"&gt;<br>
-    &nbsp;&nbsp;&lt;div>1. div&lt;/div&gt;<br>
-    &nbsp;&nbsp;&lt;div>2. div&lt;/div&gt;<br>
-    &nbsp;&lt;/div&gt;<br>
+    &lt;body&gt;
+      &lt;div id="root"&gt;
+        &lt;div>1. div&lt;/div&gt;
+        &lt;div>2. div&lt;/div&gt;
+      &lt;/div&gt;
     &lt;/body&gt;
     `
     });
@@ -126,10 +126,10 @@ function pageLoad () {
   notes.push({
     tag: "code",
     content: `
-    &lt;div id="root"&gt;<br>
-    &nbsp;&lt;div id="firstDiv" class="first"&gt;1. div&lt;/div&gt;<br>
-    &nbsp;&lt;div id="secondDiv" class="second"&gt;2. div&lt;/div&gt;<br>
-    &lt;/div&gt;<br>
+    &lt;div id="root"&gt;
+      &lt;div id="firstDiv" class="first"&gt;1. div&lt;/div&gt;
+      &lt;div id="secondDiv" class="second"&gt;2. div&lt;/div&gt;
+    &lt;/div&gt;
     `
     });
 
@@ -230,7 +230,15 @@ function pageLoad () {
   notes.push({
     tag: "code",
     content: `
-      document.querySelector("#myDiv").insertAdjacentHTML("beforeend", ${``});
+      document.querySelector("#myDiv").insertAdjacentHTML("beforeend", &#96; 
+      &lt;div&gt;
+        &lt;div id="myDiv"&gt;
+          &lt;div>1. div&lt;/div&gt;
+          &lt;div>2. div&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &#96;
+    );
     `
     });
 
@@ -255,8 +263,6 @@ function pageLoad () {
     `
     );
   }
-
-  hljs.configure({useBR: true});
 
   document.querySelectorAll('code').forEach((block) => {
     hljs.highlightBlock(block);

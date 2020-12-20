@@ -37,10 +37,13 @@ body {
     div {
       padding-top: 1rem;
       padding-bottom: 1rem;
+      line-height: 1.3rem;
     }
 
     code {
-      padding-bottom: 1rem;
+      padding: 1rem;
+      white-space: pre; //this makes container work like <pre>, which renders tabs and line breaks
+      line-height: 2rem;
 
       link {
         display: flex;

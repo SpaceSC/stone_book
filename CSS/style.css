@@ -58,10 +58,13 @@ body #root h1, body #root h2 {
 body #root div {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  line-height: 1.3rem;
 }
 
 body #root code {
-  padding-bottom: 1rem;
+  padding: 1rem;
+  white-space: pre;
+  line-height: 2rem;
 }
 
 body #root code link {
