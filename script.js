@@ -22,6 +22,13 @@ function pageLoad () {
  
   //általános
   notes.push({
+    tag: "h1",
+    content: `
+      Fontos tanulságok
+    `
+    });
+
+  notes.push({
     tag: "div",
     content: `
       1. Egymásra épülő komplexitású megoldandó feladatok
@@ -67,6 +74,13 @@ function pageLoad () {
     });
   
   //HTML
+  notes.push({
+    tag: "h1",
+    content: `
+      HTML
+    `
+    });
+
   notes.push({
     tag: "div",
     content: `
@@ -144,6 +158,13 @@ function pageLoad () {
 
   //CSS
   notes.push({
+    tag: "h1",
+    content: `
+      CSS
+    `
+    });
+
+  notes.push({
     tag: "div",
     content: `
       1. Sass: mert megírja pontosan és egyszerűen a selectorokat pl. egymásba ágyazással
@@ -199,6 +220,13 @@ function pageLoad () {
     });  
   
   //js
+  notes.push({
+    tag: "h1",
+    content: `
+      JavaScript
+    `
+    });
+
   notes.push({
     tag: "div",
     content: `
