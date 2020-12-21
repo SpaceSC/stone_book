@@ -120,7 +120,7 @@ function pageLoad () {
   notes.push({
     tag: "div",
     content: `
-      4. Classok, id-k pontosan írása, következetes használata
+      4. Class-ok, id-k pontosan írása, következetes használata
     `
     });
 
