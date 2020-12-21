@@ -224,7 +224,7 @@ function pageLoad () {
   notes.push({
     tag: "div",
     content: `
-      2. HTML elemek létreozása javascriptből meglévő divbe
+      2. HTML elemek létrehozása javascriptből meglévő divbe
     `
     });
 
@@ -238,9 +238,9 @@ function pageLoad () {
           &lt;div>2. div&lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
-    &#96;
-    );
-    `
+      &#96;
+      );
+      `
     });
 
   notes.push({
